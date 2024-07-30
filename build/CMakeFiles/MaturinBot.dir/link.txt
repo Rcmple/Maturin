@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/MaturinBot.dir/main.cpp.o -o MaturinBot 
