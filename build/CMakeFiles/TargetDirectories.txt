@@ -1,3 +1,0 @@
-/mnt/d/MaturinBot/build/CMakeFiles/MaturinBot.dir
-/mnt/d/MaturinBot/build/CMakeFiles/edit_cache.dir
-/mnt/d/MaturinBot/build/CMakeFiles/rebuild_cache.dir
