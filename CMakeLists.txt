@@ -15,7 +15,8 @@ if (CURL_FOUND)
     include_directories(${CURL_INCLUDE_DIRS})
     add_definitions(-DHAVE_CURL)
 endif()
-
+add_library(Maturin_Bot Maturin_Bot.cpp)
+target_link_libraries(Maturin_Bot /usr/local/lib/libTgBot.a ${CMAKE_THREAD_LIBS_INIT}
+        ${OPENSSL_LIBRARIES} ${Boost_LIBRARIES} ${CURL_LIBRARIES})
 add_executable(MaturinBot main.cpp)
-
-target_link_libraries(MaturinBot /usr/local/lib/libTgBot.a ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_LIBRARIES} ${Boost_LIBRARIES} ${CURL_LIBRARIES})
+target_link_libraries(MaturinBot Maturin_Bot)
