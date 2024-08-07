@@ -15,8 +15,13 @@ private:
     TgBot::Bot& Mat_Bot;
     TgBot::InlineKeyboardMarkup::Ptr Mat_keyboard;
 public:
-    explicit Maturin_Bot(TgBot::Bot& Bot, TgBot::InlineKeyboardMarkup::Ptr keyboard) : Mat_Bot(Bot), Mat_keyboard(keyboard) {};
+    explicit Maturin_Bot(TgBot::Bot& Bot, TgBot::InlineKeyboardMarkup::Ptr keyboard) : Mat_Bot(Bot), Mat_keyboard(std::move(keyboard)) {};
     void processing_Events();
+    void start_general_menu(const TgBot::Message::Ptr& message);
+    void general_menu(const TgBot::CallbackQuery::Ptr& query);
+    void change_to_InstagramLink(const TgBot::CallbackQuery::Ptr& query);
+    void change_to_Contacts(const TgBot::CallbackQuery::Ptr& query);
+
 };
 
 
