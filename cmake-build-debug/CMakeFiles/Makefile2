@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /mnt/d/MaturinBot/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/Maturin_Bot.dir/all
 all: CMakeFiles/MaturinBot.dir/all
 .PHONY : all
 
@@ -71,14 +72,41 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/Maturin_Bot.dir/clean
 clean: CMakeFiles/MaturinBot.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Maturin_Bot.dir
+
+# All Build rule for target.
+CMakeFiles/Maturin_Bot.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maturin_Bot.dir/build.make CMakeFiles/Maturin_Bot.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maturin_Bot.dir/build.make CMakeFiles/Maturin_Bot.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/MaturinBot/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target Maturin_Bot"
+.PHONY : CMakeFiles/Maturin_Bot.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Maturin_Bot.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/MaturinBot/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Maturin_Bot.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/MaturinBot/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Maturin_Bot.dir/rule
+
+# Convenience name for target.
+Maturin_Bot: CMakeFiles/Maturin_Bot.dir/rule
+.PHONY : Maturin_Bot
+
+# clean rule for target.
+CMakeFiles/Maturin_Bot.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maturin_Bot.dir/build.make CMakeFiles/Maturin_Bot.dir/clean
+.PHONY : CMakeFiles/Maturin_Bot.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/MaturinBot.dir
 
 # All Build rule for target.
-CMakeFiles/MaturinBot.dir/all:
+CMakeFiles/MaturinBot.dir/all: CMakeFiles/Maturin_Bot.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaturinBot.dir/build.make CMakeFiles/MaturinBot.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaturinBot.dir/build.make CMakeFiles/MaturinBot.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/MaturinBot/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target MaturinBot"
@@ -86,7 +114,7 @@ CMakeFiles/MaturinBot.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MaturinBot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/MaturinBot/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/MaturinBot/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MaturinBot.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/MaturinBot/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/MaturinBot.dir/rule

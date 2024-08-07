@@ -92,6 +92,12 @@ MaturinBot_EXTERNAL_OBJECTS =
 
 MaturinBot: CMakeFiles/MaturinBot.dir/main.cpp.o
 MaturinBot: CMakeFiles/MaturinBot.dir/build.make
+MaturinBot: libMaturin_Bot.a
+MaturinBot: /usr/local/lib/libTgBot.a
+MaturinBot: /usr/lib/x86_64-linux-gnu/libssl.so
+MaturinBot: /usr/lib/x86_64-linux-gnu/libcrypto.so
+MaturinBot: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
+MaturinBot: /usr/lib/x86_64-linux-gnu/libcurl.so
 MaturinBot: CMakeFiles/MaturinBot.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/MaturinBot/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MaturinBot"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MaturinBot.dir/link.txt --verbose=$(VERBOSE)

@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Maturin_Bot
+
+# Build rule for target.
+Maturin_Bot: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Maturin_Bot
+.PHONY : Maturin_Bot
+
+# fast build rule for target.
+Maturin_Bot/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maturin_Bot.dir/build.make CMakeFiles/Maturin_Bot.dir/build
+.PHONY : Maturin_Bot/fast
+
+#=============================================================================
 # Target rules for targets named MaturinBot
 
 # Build rule for target.
@@ -128,6 +141,30 @@ MaturinBot: cmake_check_build_system
 MaturinBot/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaturinBot.dir/build.make CMakeFiles/MaturinBot.dir/build
 .PHONY : MaturinBot/fast
+
+Maturin_Bot.o: Maturin_Bot.cpp.o
+.PHONY : Maturin_Bot.o
+
+# target to build an object file
+Maturin_Bot.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maturin_Bot.dir/build.make CMakeFiles/Maturin_Bot.dir/Maturin_Bot.cpp.o
+.PHONY : Maturin_Bot.cpp.o
+
+Maturin_Bot.i: Maturin_Bot.cpp.i
+.PHONY : Maturin_Bot.i
+
+# target to preprocess a source file
+Maturin_Bot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maturin_Bot.dir/build.make CMakeFiles/Maturin_Bot.dir/Maturin_Bot.cpp.i
+.PHONY : Maturin_Bot.cpp.i
+
+Maturin_Bot.s: Maturin_Bot.cpp.s
+.PHONY : Maturin_Bot.s
+
+# target to generate assembly for a file
+Maturin_Bot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maturin_Bot.dir/build.make CMakeFiles/Maturin_Bot.dir/Maturin_Bot.cpp.s
+.PHONY : Maturin_Bot.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -162,6 +199,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MaturinBot"
+	@echo "... Maturin_Bot"
+	@echo "... Maturin_Bot.o"
+	@echo "... Maturin_Bot.i"
+	@echo "... Maturin_Bot.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
