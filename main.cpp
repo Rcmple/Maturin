@@ -11,7 +11,7 @@ using namespace TgBot;
 
 int main() {
 
-    string token("6783099024:AAGoHd9Dm-ZvYwfqcK7B1hyNKbcN1CRyq-o");
+    string token("my token");
 
     Bot bot(token);
 
